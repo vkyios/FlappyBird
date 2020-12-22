@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cPg-cY-M9D">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="FlappyBird" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xeE-8E-Kt7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="266"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y2V-gr-fDm">
+            <objects>
+                <viewController id="cPg-cY-M9D" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DN3-Ga-ACj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y97-du-99H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6pQ-o4-1k3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="bEG-GW-NPG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="0MN-2g-VLl">
+                                <rect key="frame" x="-8" y="223.5" width="391" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HrR-FF-E3M"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="plR-dM-zvX">
+                                <rect key="frame" x="57.5" y="363.5" width="260" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LbI-HI-y2G"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Av-Fu-wnE">
+                                <rect key="frame" x="127.5" y="463.5" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OsY-Qt-pbP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="modal" id="zfh-oE-hr9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OsY-Qt-pbP" firstAttribute="top" secondItem="DN3-Ga-ACj" secondAttribute="bottom" id="2n1-53-zRD"/>
+                            <constraint firstItem="bEG-GW-NPG" firstAttribute="top" secondItem="6pQ-o4-1k3" secondAttribute="top" id="415-um-OzX"/>
+                            <constraint firstItem="plR-dM-zvX" firstAttribute="top" secondItem="0MN-2g-VLl" secondAttribute="bottom" constant="20" id="4eY-O3-OyD"/>
+                            <constraint firstItem="4Av-Fu-wnE" firstAttribute="centerX" secondItem="bEG-GW-NPG" secondAttribute="centerX" id="6mJ-dN-fnM"/>
+                            <constraint firstAttribute="bottom" secondItem="bEG-GW-NPG" secondAttribute="bottom" id="CLi-VR-885"/>
+                            <constraint firstItem="OsY-Qt-pbP" firstAttribute="leading" secondItem="6pQ-o4-1k3" secondAttribute="leading" id="Eft-Tm-JZb"/>
+                            <constraint firstItem="4Av-Fu-wnE" firstAttribute="top" secondItem="plR-dM-zvX" secondAttribute="bottom" constant="20" id="MZu-aU-PfY"/>
+                            <constraint firstItem="Y97-du-99H" firstAttribute="top" secondItem="OsY-Qt-pbP" secondAttribute="bottom" id="O7y-dq-dII"/>
+                            <constraint firstAttribute="trailing" secondItem="OsY-Qt-pbP" secondAttribute="trailing" id="PUi-Bc-CYC"/>
+                            <constraint firstItem="bEG-GW-NPG" firstAttribute="leading" secondItem="6pQ-o4-1k3" secondAttribute="leading" id="Wbc-Ij-CAM"/>
+                            <constraint firstItem="0MN-2g-VLl" firstAttribute="centerY" secondItem="bEG-GW-NPG" secondAttribute="centerY" constant="-50" id="ijO-A5-8QF"/>
+                            <constraint firstItem="0MN-2g-VLl" firstAttribute="centerX" secondItem="bEG-GW-NPG" secondAttribute="centerX" id="jco-6T-kBd"/>
+                            <constraint firstItem="plR-dM-zvX" firstAttribute="centerX" secondItem="0MN-2g-VLl" secondAttribute="centerX" id="pUN-D4-KbM"/>
+                            <constraint firstAttribute="trailing" secondItem="bEG-GW-NPG" secondAttribute="trailing" id="pbz-Y9-ivY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aje-F0-ita" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="266"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="700" height="399"/>
+        <image name="bird" width="260" height="260"/>
+        <image name="title" width="391" height="131"/>
+    </resources>
+</document>
